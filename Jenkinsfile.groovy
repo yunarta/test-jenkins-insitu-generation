@@ -1,8 +1,10 @@
 def call() {
     if (BRANCH_NAME == "master") {
-        load 'SequenceA.groovy'
+        pipeline = load 'SequenceA.groovy'
+        pipeline()
     } else {
-        load 'SequenceB.groovy'
+        pipeline = load 'SequenceB.groovy'
+        pipeline()
     }
 }
 

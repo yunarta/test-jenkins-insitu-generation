@@ -1,15 +1,18 @@
-pipeline {
-    agent {
-        node {
-            label "java"
+def call() {
+    pipeline {
+        agent {
+            node {
+                label "java"
+            }
         }
-    }
 
-    stages {
-        stage("Develop") {
-            steps {
-                echo "develop branch"
+        stages {
+            stage("Develop") {
+                steps {
+                    echo "develop branch"
+                }
             }
         }
     }
+
 }
